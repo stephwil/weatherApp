@@ -11,4 +11,9 @@ var weather = require('./index');
 
 app.use('/weather', weather);
 
+app.get('/', (req,res) => {
+  //give a friendly message for / endpoint
+  res.send('Weather to the Current Weather API!')
+})
+
 module.exports = app;
